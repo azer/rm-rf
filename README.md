@@ -1,6 +1,6 @@
 ## rimraf-glob
 
-rm -rf with glob
+rimraf (rm -rf) with glob
 
 ```js
 var rmrf = require('rimraf-glob')
