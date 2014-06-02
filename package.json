@@ -1,0 +1,28 @@
+{
+  "name": "rimraf-glob",
+  "version": "0.0.0",
+  "description": "rm -rf with glob",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "rmrf",
+    "rimraf",
+    "glob"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/rimraf-glob.git",
+    "type": "git"
+  },
+  "author": "azer",
+  "license": "BSD",
+  "dependencies": {
+    "parallel-loop": "0.0.1",
+    "rimraf": "^2.2.8",
+    "glob": "^4.0.2"
+  },
+  "devDependencies": {
+    "prova": "^1.10.0"
+  }
+}
