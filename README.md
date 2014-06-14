@@ -1,9 +1,9 @@
-## rimraf-glob
+## rm-rf
 
 rimraf (rm -rf) with glob
 
 ```js
-var rmrf = require('rimraf-glob')
+var rmrf = require('rm-rf')
 
 rmrf('**/*.js', function (error) {
   // done

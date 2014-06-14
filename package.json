@@ -1,5 +1,5 @@
 {
-  "name": "rimraf-glob",
+  "name": "rm-rf",
   "version": "0.0.0",
   "description": "rm -rf with glob",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "glob"
   ],
   "repository": {
-    "url": "git@github.com:azer/rimraf-glob.git",
+    "url": "git@github.com:azer/rm-rf.git",
     "type": "git"
   },
   "author": "azer",
