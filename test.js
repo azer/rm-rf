@@ -3,7 +3,7 @@ var fs = require("fs");
 var rmrf = require("./");
 
 test('rimraf glob', function (assert) {
-  assert.plan(4);
+  assert.plan(6);
 
   fs.writeFileSync('a.tmp', 'a');
   fs.writeFileSync('b.tmp', 'b');
@@ -11,8 +11,13 @@ test('rimraf glob', function (assert) {
 
   rmrf('*.tmp', function (error) {
     assert.error(error);
-    assert.notOk(fs.existsSync('a.js'));
-    assert.notOk(fs.existsSync('b.js'));
-    assert.notOk(fs.existsSync('c.js'));
+    assert.notOk(fs.existsSync('a.tmp'));
+    assert.notOk(fs.existsSync('b.tmp'));
+    assert.notOk(fs.existsSync('c.tmp'));
+  });
+
+  rmrf('*.json', {cwd: 'd'}, function (error) {
+    assert.error(error);
+    assert.ok(fs.existsSync('package.json'));
   });
 });
