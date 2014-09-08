@@ -4,8 +4,16 @@ var loop = require("parallel-loop");
 
 module.exports = rmrf;
 
-function rmrf (pattern, callback) {
-  glob(pattern, function (error, filenames) {
+function rmrf (pattern, _options, callback) {
+  var options;
+  if (callback === undefined) {
+    callback = _options;
+    options = {};
+  } else {
+    options = _options;
+  }
+
+  glob(pattern, options, function (error, filenames) {
     if (error) return callback(error);
 
     loop(filenames.length, each, callback);
